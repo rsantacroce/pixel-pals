@@ -1,3 +1,204 @@
 <resources>
     <string name="app_name">Pixel Pals</string>
+
+    <!-- Gallery -->
+    <string name="gallery_title">My Drawings</string>
+    <string name="new_drawing">New Drawing</string>
+    <string name="drawing_default_name">Picture %1$d</string>
+    <string name="copy_of">%1$s (copy)</string>
+    <string name="duplicate">Duplicate</string>
+    <string name="rename">Rename</string>
+    <string name="delete">Delete</string>
+    <string name="more_actions">More for %1$s</string>
+    <string name="open_drawing">Open %1$s</string>
+    <string name="recycle_bin">Recycle Bin</string>
+    <string name="recycle_bin_empty">Nothing in here! Deleted drawings stay here for 30 days.</string>
+    <string name="restore">Bring back</string>
+    <string name="empty_bin">Empty bin</string>
+    <string name="empty_bin_confirm">Delete these drawings forever?</string>
+    <string name="for_grownups">Grown-ups</string>
+    <string name="gallery_empty">Tap the big plus to start your first picture!</string>
+    <string name="corrupt_title">Oops!</string>
+    <string name="corrupt_message">One drawing couldn\'t be opened. We kept the file safe in a separate folder so a grown-up can look at it.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_error">Hmm, saving is having trouble. Ask a grown-up to check free space.</string>
+    <string name="delete_drawing_confirm">Put \"%1$s\" in the Recycle Bin?</string>
+    <string name="yes_delete">Yes, delete it</string>
+    <string name="no_keep">No, keep it!</string>
+    <string name="name_label">Name</string>
+
+    <!-- New drawing -->
+    <string name="pick_size">How big?</string>
+    <string name="size_tiny">Tiny</string>
+    <string name="size_small">Small</string>
+    <string name="size_medium">Medium</string>
+    <string name="size_big">Big</string>
+    <string name="size_more">More</string>
+    <string name="size_dims">%1$d × %2$d</string>
+    <string name="custom_size">Custom size</string>
+    <string name="width">Width</string>
+    <string name="height">Height</string>
+    <string name="create">Create</string>
+    <string name="coloring_pages">Coloring pages</string>
+    <string name="challenges">Copy the picture</string>
+    <string name="from_photo">From a photo</string>
+    <string name="photo_error">That picture couldn\'t be opened. Try another one!</string>
+    <string name="layer_background">Background</string>
+    <string name="layer_n">Layer %1$d</string>
+    <string name="layer_outline">Outline</string>
+    <string name="layer_colors">Colors</string>
+
+    <!-- Templates / stamps / challenges names -->
+    <string name="tpl_house">House</string>
+    <string name="tpl_fish">Fish</string>
+    <string name="tpl_dinosaur">Dinosaur</string>
+    <string name="tpl_robot">Robot</string>
+    <string name="tpl_flower">Flower</string>
+    <string name="stamp_heart">Heart</string>
+    <string name="stamp_star">Star</string>
+    <string name="stamp_smiley">Smiley</string>
+    <string name="stamp_flower">Flower</string>
+    <string name="stamp_cat">Cat</string>
+    <string name="stamp_sword">Sword</string>
+    <string name="stamp_mushroom">Mushroom</string>
+    <string name="stamp_rocket">Rocket</string>
+    <string name="stamp_ghost">Ghost</string>
+    <string name="stamp_tree">Tree</string>
+
+    <!-- Editor -->
+    <string name="home">Home</string>
+    <string name="undo">Undo</string>
+    <string name="redo">Redo</string>
+    <string name="clear">Clear</string>
+    <string name="export">Save picture</string>
+    <string name="help">Keys</string>
+    <string name="tool_pencil">Pencil</string>
+    <string name="tool_eraser">Eraser</string>
+    <string name="tool_fill">Fill</string>
+    <string name="tool_picker">Picker</string>
+    <string name="tool_line">Line</string>
+    <string name="tool_rectangle">Box</string>
+    <string name="tool_ellipse">Circle</string>
+    <string name="tool_mirror">Mirror</string>
+    <string name="tool_move">Move</string>
+    <string name="tool_stamp">Stamps</string>
+    <string name="tool_dither">Pattern</string>
+    <string name="tool_replace">Swap</string>
+    <string name="brush_size">Size %1$d</string>
+    <string name="outline">Outline</string>
+    <string name="filled">Filled</string>
+    <string name="mirror_left_right">Left-Right</string>
+    <string name="mirror_top_bottom">Top-Bottom</string>
+    <string name="zoom_in">Zoom in</string>
+    <string name="zoom_out">Zoom out</string>
+    <string name="fit_screen">Fit</string>
+    <string name="grid">Grid</string>
+    <string name="canvas_description">Drawing canvas, %1$d by %2$d pixels</string>
+    <string name="layer_locked">This layer is locked. Pick another layer to draw!</string>
+    <string name="pick_stamp">Pick a stamp</string>
+
+    <!-- Clear dialog -->
+    <string name="clear_title">Wipe the whole picture?</string>
+    <string name="clear_yes">Yes, wipe it!</string>
+    <string name="clear_no">No, keep it!</string>
+
+    <!-- Colors -->
+    <string name="current_color">Current color</string>
+    <string name="color_swatch">Color %1$s</string>
+    <string name="palette_bright">Bright</string>
+    <string name="palette_rainbow">Rainbow</string>
+    <string name="palette_pastel">Pastel</string>
+    <string name="palette_forest">Forest</string>
+    <string name="palette_ocean">Ocean</string>
+    <string name="palette_retro">Retro 8-bit</string>
+    <string name="palette_challenge">Picture colors</string>
+    <string name="my_colors">My Colors</string>
+    <string name="recent_colors">Recently used</string>
+    <string name="mix_color">Mix a color</string>
+    <string name="brightness">Brightness</string>
+    <string name="add_to_my_colors">Add to My Colors</string>
+    <string name="use_color">Use it</string>
+    <string name="colors">Colors</string>
+
+    <!-- Layers -->
+    <string name="layers">Layers</string>
+    <string name="add_layer">Add layer</string>
+    <string name="move_up">Move up</string>
+    <string name="move_down">Move down</string>
+    <string name="show_layer">Show %1$s</string>
+    <string name="hide_layer">Hide %1$s</string>
+    <string name="select_layer">Draw on %1$s</string>
+    <string name="delete_layer_confirm">Delete the layer \"%1$s\"?</string>
+    <string name="locked">Locked</string>
+
+    <!-- Frames -->
+    <string name="frames">Frames</string>
+    <string name="add_frame">New frame</string>
+    <string name="duplicate_frame">Copy frame</string>
+    <string name="delete_frame">Delete frame</string>
+    <string name="play">Play</string>
+    <string name="pause">Stop</string>
+    <string name="onion_skin">Ghost</string>
+    <string name="frame_n">Frame %1$d</string>
+    <string name="speed">Speed %1$d</string>
+    <string name="slower">Slower</string>
+    <string name="faster">Faster</string>
+    <string name="move_frame_left">Move frame earlier</string>
+    <string name="move_frame_right">Move frame later</string>
+
+    <!-- Export -->
+    <string name="export_title">Save your picture</string>
+    <string name="export_size">Size</string>
+    <string name="export_scale">%1$d×</string>
+    <string name="export_pixels">%1$d × %2$d pixels</string>
+    <string name="background">Background</string>
+    <string name="see_through">See-through</string>
+    <string name="white">White</string>
+    <string name="export_kind">What to save</string>
+    <string name="kind_picture">Picture</string>
+    <string name="kind_animation">Animation</string>
+    <string name="kind_sheet">Sprite sheet</string>
+    <string name="share">Share</string>
+    <string name="save_to_pictures">Save to Pictures</string>
+    <string name="save_as">Save as…</string>
+    <string name="export_done">Saved! 🎉</string>
+    <string name="export_failed">That didn\'t work. Try again?</string>
+    <string name="exporting">Getting it ready…</string>
+
+    <!-- Challenge -->
+    <string name="challenge_copy_this">Copy this!</string>
+    <string name="challenge_done">You did it! 🎉</string>
+    <string name="challenge_progress">%1$d% matching</string>
+
+    <!-- Shortcuts -->
+    <string name="shortcuts_title">Keyboard shortcuts</string>
+    <string name="shortcut_tools">B pencil · E eraser · G fill · I picker · L line · R box · O circle · V move</string>
+    <string name="shortcut_mirror">M mirror · H grid · [ ] brush size · 1–9 colors</string>
+    <string name="shortcut_undo">Ctrl/Cmd+Z undo · Ctrl/Cmd+Shift+Z or Ctrl+Y redo</string>
+    <string name="shortcut_view">Ctrl+scroll or + − zoom · 0 fit · Space+drag or middle mouse to pan</string>
+    <string name="close">Close</string>
+
+    <!-- Parent gate & settings -->
+    <string name="parent_gate_title">Grown-ups only</string>
+    <string name="parent_gate_question">What is %1$d × %2$d?</string>
+    <string name="parent_gate_wrong">Not quite. Try again!</string>
+    <string name="parent_gate_or_hold">…or hold this button for 3 seconds</string>
+    <string name="hold_me">Hold me</string>
+    <string name="enter">Enter</string>
+    <string name="erase_digit">Erase digit</string>
+    <string name="parent_settings">Grown-up settings</string>
+    <string name="setting_sound">Sounds</string>
+    <string name="setting_labels">Show words under buttons</string>
+    <string name="setting_custom_sizes">Allow custom canvas sizes</string>
+    <string name="setting_theme">Theme</string>
+    <string name="theme_system">Like the device</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="export_all_zip">Export all drawings (ZIP)</string>
+    <string name="reset_app">Reset app</string>
+    <string name="reset_confirm">This deletes every drawing, the Recycle Bin and all settings. Are you sure?</string>
+    <string name="reset_yes">Delete everything</string>
+    <string name="back">Back</string>
+    <string name="privacy_note">Pixel Pals works fully offline. No ads, no accounts, no tracking.</string>
 </resources>

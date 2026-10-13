@@ -51,3 +51,8 @@ compose.resources {
     packageOfResClass = "app.pixelpals.ui.res"
     generateResClass = always
 }
+
+tasks.withType<Test>().configureEach {
+    // Pass -Dshots=name1,name2 to render only some screenshots in ScreenshotTest.
+    providers.systemProperty("shots").orNull?.let { systemProperty("shots", it) }
+}

@@ -26,7 +26,7 @@ compose.desktop {
             // From ./gradlew suggestRuntimeModules; java.desktop (AWT dialogs, ImageIO, Java Sound) is included by default.
             modules("java.instrument", "jdk.unsupported")
             packageName = "PixelPals"
-            packageVersion = "1.0.0"
+            packageVersion = providers.gradleProperty("pixelpals.version").get()
             description = "Pixel Pals - a pixel art editor for kids"
             vendor = "Pixel Pals"
             macOS {

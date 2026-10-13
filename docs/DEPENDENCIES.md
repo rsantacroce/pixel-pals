@@ -17,6 +17,15 @@ Central and Google Maven in October 2026.
 | Android Gradle Plugin | 9.4.1 | Apache-2.0 | Android build. Uses `com.android.kotlin.multiplatform.library` for the shared modules. |
 | ktlint Gradle plugin (`org.jlleitschuh.gradle.ktlint`) | 14.2.0 | MIT | Lint and formatting in CI. It's a build tool only and isn't shipped in the app. |
 
+The apps also pull in these transitive runtime dependencies, all Apache-2.0: the AndroidX support
+libraries (core, lifecycle, savedstate, emoji2, window, profileinstaller and others), the JetBrains
+lifecycle/savedstate/navigationevent ports, Skiko, `org.jetbrains:annotations`, `org.jspecify:jspecify`
+and `com.google.guava:listenablefuture`. You can list them with
+`./gradlew :androidApp:dependencies --configuration releaseRuntimeClasspath` and
+`./gradlew :desktopApp:dependencies --configuration jvmRuntimeClasspath`.
+
+Every pinned version above was the latest stable release on 13 October 2026.
+
 Things I wrote myself instead of adding a dependency:
 
 - the PNG encoder

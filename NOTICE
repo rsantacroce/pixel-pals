@@ -1,0 +1,9 @@
+Pixel Pals
+Copyright 2026 Roberto Santacroce Martins
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It includes third-party libraries, all licensed under the Apache License,
+Version 2.0: the Kotlin standard library and kotlinx libraries, Compose
+Multiplatform and Skiko (JetBrains), AndroidX libraries (Google), JSpecify,
+JetBrains annotations and Guava ListenableFuture. See docs/DEPENDENCIES.md.

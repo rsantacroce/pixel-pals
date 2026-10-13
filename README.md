@@ -14,7 +14,14 @@ does not request the INTERNET permission.
 | ![Gallery](docs/screenshots/desktop-gallery.png) | ![Gallery on a phone](docs/screenshots/phone-gallery.png) |
 
 More screenshots are in [`docs/screenshots`](docs/screenshots): dark theme, the new-drawing picker,
-a coloring page, a challenge and a tablet layout.
+a coloring page, a challenge and a tablet layout. The website is at
+[rsantacroce.github.io/pixel-pals-site](https://rsantacroce.github.io/pixel-pals-site/).
+
+## Download
+
+Installers for Android, Windows, macOS (Apple Silicon and Intel) and Linux are on the
+[Releases page](https://github.com/rsantacroce/pixel-pals/releases/latest). The release notes explain
+how to get past the warnings for the desktop installers, which aren't code-signed yet.
 
 ## Features
 
@@ -56,6 +63,18 @@ adb install androidApp/build/outputs/apk/debug/androidApp-debug.apk
 # All tests (unit, Compose UI, Android host tests) and lint
 ./gradlew allTests :core-model:testAndroidHostTest :core-io:testAndroidHostTest ktlintCheck
 ```
+
+### Making a release
+
+1. Bump `pixelpals.version` (and `pixelpals.versionCode` for Android) in `gradle.properties`.
+2. Commit, then tag and push: `git tag v1.0.1 && git push origin v1.0.1`.
+
+[`release.yml`](.github/workflows/release.yml) checks that the tag matches the version, then builds the
+signed APK, the DEB, both DMGs and the MSI on their own runners and publishes them as a GitHub Release
+with checksums. The Android signing key comes from repository secrets (`ANDROID_KEYSTORE_BASE64`,
+`ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`). Locally,
+`./gradlew :androidApp:assembleRelease` builds an unsigned APK unless you set those variables, with
+`ANDROID_KEYSTORE_PATH` in place of the base64 one.
 
 ### Native installers
 
@@ -99,3 +118,8 @@ More reading:
 Strings live in `ui/src/commonMain/composeResources/values/strings.xml`. To add a language, copy that
 file to `values-pt/strings.xml`, `values-es/strings.xml` and so on, then translate it. No code changes
 are needed.
+
+## License
+
+Pixel Pals is licensed under the [Apache License 2.0](LICENSE). See [`NOTICE`](NOTICE) for attribution
+and [`docs/DEPENDENCIES.md`](docs/DEPENDENCIES.md) for third-party licenses.

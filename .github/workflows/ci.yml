@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Lint
+        run: ./gradlew ktlintCheck
+      - name: Unit and UI tests
+        run: xvfb-run --auto-servernum ./gradlew allTests :core-model:testAndroidHostTest :core-io:testAndroidHostTest
+      - name: Android debug APK
+        run: ./gradlew :androidApp:assembleDebug
+      - name: Linux package (DEB)
+        run: ./gradlew :desktopApp:packageDeb
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pixelpals-android-debug
+          path: androidApp/build/outputs/apk/debug/*.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pixelpals-linux
+          path: desktopApp/build/compose/binaries/main/deb/*.deb
+
+  package-desktop:
+    strategy:
+      matrix:
+        include:
+          - os: macos-latest
+            task: packageDmg
+            path: desktopApp/build/compose/binaries/main/dmg/*.dmg
+          - os: windows-latest
+            task: packageMsi
+            path: desktopApp/build/compose/binaries/main/msi/*.msi
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v4
+      - run: ./gradlew :desktopApp:${{ matrix.task }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pixelpals-${{ matrix.os }}
+          path: ${{ matrix.path }}
